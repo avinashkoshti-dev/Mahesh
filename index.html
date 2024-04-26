@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body id="MainDiv">
+<div>
+    <nav class="navbar navbar-expand-lg bg-info">
+        <div class="container-fluid container">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <div class="d-flex" role="search">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">AddData</button>
+          </div>         
+        </div>
+      </nav>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody id="DivTableData">        
+          </tbody>
+        <tbody class="d-noe" id="SampleData">         
+            <tr>
+                <th class="Id"></th>
+                <td class="Title"></td>
+                <td class="Brand"></td>
+                <td class="Category"></td>
+                <td class="Action">
+                    <a href="#" class="btn btn-primary btn-sm me-2 btnEdit">Edit</a>
+                    <a href="#" class="btn btn-danger btn-sm me-2 btnDelete">Delete</a>
+                </td>
+            </tr>      
+        </tbody>
+      </table>
+      <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form role="form">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <input type="hidden" class="form-control" id="productID">
+
+                        <label for="Title">Title</label>
+                        <input type="text" class="form-control" required id="producttitle" placeholder="Title">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="Brand">Brand</label>
+                        <input type="text" class="form-control" required id="productbrand" placeholder="Brand">
+
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="Category">Category</label>
+                        <input type="text" class="form-control" required id="productcategory" placeholder="Category">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="productDescription">Description</label>
+                        <textarea class="form-control" required id="description" cols="5" rows="3" placeholder="Description"></textarea>
+                        <!-- <input type="text" class="form-control" required id="description" placeholder="Description"> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="btnAdd" class="btn btn-primary" id="Modal">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
